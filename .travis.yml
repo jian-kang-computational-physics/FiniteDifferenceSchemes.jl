@@ -14,5 +14,7 @@ matrix:
 notifications:
   email: false
 after_success:
-  - julia -e 'using Pkg; cd(Pkg.dir("FiniteDifferenceSchemes")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
-  # - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+  ## Document given by codecov suggests the following line; however, reports in Travis-CI showed that
+  ## "Pkg.dir(...)" is deprecated. So I changed the following line back to the default settings.
+  # - julia -e 'using Pkg; cd(Pkg.dir("FiniteDifferenceSchemes")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
+  - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
