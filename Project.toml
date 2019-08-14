@@ -1,0 +1,13 @@
+name = "FiniteDifferenceSchemes"
+uuid = "c4da4270-be77-11e9-23f5-b9cc158b4984"
+authors = ["Jian Kang <jkang_cmpt_physics@163.com>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
